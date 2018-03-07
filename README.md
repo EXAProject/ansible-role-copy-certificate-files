@@ -39,12 +39,12 @@ None.
     project_files:
       files:
         - src: "example.txt"
-          dst: "~/test/example.txt"
+          dst: "~/example.txt"
           mode: '0755'
           force: false
       templates:
         - src: "example_template.txt.j2"
-          dst: "~/test/example_from_template.txt"
+          dst: "~/example_from_template.txt"
           mode: '0755'
           force: false
 
