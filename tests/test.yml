@@ -14,4 +14,4 @@
           mode: 0755
           force: false
   roles:
-    - copy-files
+    - role_under_test
