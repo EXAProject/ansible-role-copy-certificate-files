@@ -1,28 +1,22 @@
----
 services: docker
-
 env:
-  - distro: centos7
-  - distro: centos6
-  - distro: ubuntu1604
-  - distro: ubuntu1404
-  - distro: ubuntu1204
-  - distro: debian9
-  - distro: debian8
-  - distro: fedora24
-  - distro: fedora27
-
+- distro: centos7
+- distro: centos6
+- distro: ubuntu1604
+- distro: ubuntu1404
+- distro: ubuntu1204
+- distro: debian9
+- distro: debian8
+- distro: fedora24
+- distro: fedora27
 script:
-  # Configure test script so we can run extra tests after playbook is run.
-  - export container_id=$(date +%s)
-  - export cleanup=false
-
-  # Download test shim.
-  - wget -O ${PWD}/tests/test.sh https://gist.githubusercontent.com/geerlingguy/73ef1e5ee45d8694570f334be385e181/raw/
-  - chmod +x ${PWD}/tests/test.sh
-
-  # Run tests.
-  - ${PWD}/tests/test.sh
-
+- export container_id=$(date +%s)
+- export cleanup=false
+- wget -O ${PWD}/tests/test.sh https://gist.githubusercontent.com/geerlingguy/73ef1e5ee45d8694570f334be385e181/raw/
+- chmod +x ${PWD}/tests/test.sh
+- "${PWD}/tests/test.sh"
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
+  slack:
+    rooms:
+      secure: Do2hDaNQW485Ta0IRa4KGRixJfYrUk9wuHSMKfL3SBtSEYFfsNyFs04j3UxWu3pZDFPEmy0AustwGosfmcUMs7MQx7T5Rff+1I/VXvLrOGyUk7zsWAE8OytfzPj230rZX406YiO0SB+lhGD1H6PSa662Pv5oYKC3e+Obh6OE1x77w7It+WqxxZYC/kywUtw0fJc6+RWmOQa6AmfYp9TjVxrc5UURkLA1fcYt4AAEZ2cMIZlbkQRe3iO3gfEIFHoM1LeDUIogMAAC1emTFAgARRwHUJhC1anCjE4HZuOb9i1i6gGBHu8BmGuxzuFS0qF+1j+6FlSWM9OkRzbYHw1mokPyGTj1lzDIGNU3/i1A8s3d2cHTK9gtkmKaES7X+QJZFABg15pheeZ//3WAfY/Dc2XJEtE8/WsfxOY7AufCC92ft+8jMdAXmNjUaWEh1pfxRn6TEYcFmEsupiiECBBtBJac+SshUYt6eVWG89oje186uQJ4KpHz4gWs7wmZW3jkkKZEqyDYzMJG+Nb7NCnbmaXXyojJsziC30WCTvffXals2Rf3DtFooenKrziXBcJhI6DS87oj1zk8yVc6zFxjeeN5rsdyIi+9w7DMYYaHgBGk0L379gI9c4ur8rufahkWS89uucwApNV52y9/yqFSrEf6/9o7wu51dGOtmbyXRNo=
