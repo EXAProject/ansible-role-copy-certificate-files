@@ -1,0 +1,17 @@
+---
+- hosts: all
+  vars:
+    template_var: 'I am a text.'
+    project_files:
+      files:
+        - src: "example.txt"
+          dst: "~/test/example.txt"
+          mode: 0755
+          force: false
+      templates:
+        - src: "example_template.txt.j2"
+          dst: "~/test/example_from_template.txt"
+          mode: 0755
+          force: false
+  roles:
+    - copy-files
