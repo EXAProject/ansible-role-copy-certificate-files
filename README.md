@@ -16,7 +16,7 @@ Available variables are listed below, along with default values (see `defaults/m
 A list of files and/or templates to copy, each file has to have the properties
 * `src` (string)
 * `dst` (string)
-* `mode` (symbolic or octal form)
+* `mode` (symbolic and octal form)
 * `force` (if the file should be overwritten if it already exists)
 
 ## Dependencies
@@ -40,12 +40,12 @@ None.
       files:
         - src: "example.txt"
           dst: "~/test/example.txt"
-          mode: 755
+          mode: '0755'
           force: false
       templates:
         - src: "example_template.txt.j2"
           dst: "~/test/example_from_template.txt"
-          mode: 755
+          mode: '0755'
           force: false
 
 ## License

@@ -6,12 +6,12 @@
       files:
         - src: "example.txt"
           dst: "~/example.txt"
-          mode: 0755
+          mode: '0755'
           force: false
       templates:
         - src: "example_template.txt.j2"
           dst: "~/example_from_template.txt"
-          mode: 0755
+          mode: '0755'
           force: false
   roles:
     - role_under_test
