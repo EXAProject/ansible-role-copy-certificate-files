@@ -1,5 +1,7 @@
 # Ansible Role: Copy Files
 
+[![Build Status](https://api.travis-ci.org/fourforbusiness/ansible-role-copy-files.svg?branch=master)](https://api.travis-ci.org/fourforbusiness/ansible-role-copy-files)
+
 Ensures files and templates exist on the target machine.
 
 ## Requirements
