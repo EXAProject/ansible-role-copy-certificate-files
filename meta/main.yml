@@ -1,6 +1,6 @@
 galaxy_info:
   author: "4fb"
-  description: Installing shopware
+  description: Copies files and templates to the target machine
   company: "four for business AG"
   license: "license (BSD, MIT)"
   min_ansible_version: 1.4
