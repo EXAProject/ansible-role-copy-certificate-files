@@ -15,15 +15,6 @@
   when:
     - project_files.templates | length > 0
 
-- name: Debug
-  debug:
-    msg: "{{ item.0 }} and {{ item.1 }}"
-  when:
-    - project_files_local | length > 0
-  with_together:
-    - "{{ project_files.files }}"
-    - "{{ project_files_local.results }}"
-
 - name: Create folder structure for files
   file:
     path: "{{ item.0.dst.path }}"
