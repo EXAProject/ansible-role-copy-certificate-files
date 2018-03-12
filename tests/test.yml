@@ -11,6 +11,12 @@
             filename: "example.txt"
           mode: '0755'
           force: false
+        - src: "i_do_not_exist.txt"
+          dst:
+            path: "/tmp"
+            filename: "i_do_not_exist.txt"
+          mode: '0755'
+          force: false
       templates:
         - src: "example_template.txt.j2"
           dst:
