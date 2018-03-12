@@ -63,4 +63,5 @@
     - item.1.stat.exists
   with_together:
     - "{{ project_files.templates }}"
+    - "{{ project_templates_local.results }}"
     
