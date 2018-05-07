@@ -1,6 +1,6 @@
 # Ansible Role: Copy Files
 
-[![Build Status](https://api.travis-ci.org/fourforbusiness/ansible-role-copy-files.svg?branch=master)](https://api.travis-ci.org/fourforbusiness/ansible-role-copy-files)
+[![Build Status](https://api.travis-ci.org/fourforbusiness/ansible-role-copy-files.svg?branch=master)](https://api.travis-ci.org/fourforbusiness/ansible-role-copy-files) [![Ansible-Galaxy](https://img.shields.io/ansible/role/24228.svg)](https://galaxy.ansible.com/fourforbusiness/copy-files/) ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
 Ensures files and templates exist on the target machine.
 
