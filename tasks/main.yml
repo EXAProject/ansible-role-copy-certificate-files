@@ -45,6 +45,8 @@
     src: "{{ item.0.src }}"
     dest: "{{ item.0.dst.path }}/{{ item.0.dst.filename }}"
     mode: "{{ item.0.mode }}"
+    owner: "{{ item.0.owner | default('vagrant')  }}"
+    group: "{{ item.0.group | default('vagrant')  }}"
   when:
     - project_files_local | length > 0
     - item.1.stat.exists
@@ -58,6 +60,8 @@
     src: "{{ item.0.src }}"
     dest: "{{ item.0.dst.path }}/{{ item.0.dst.filename }}"
     mode: "{{ item.0.mode }}"
+    owner: "{{ item.0.owner | default('vagrant') }}"
+    group: "{{ item.0.group | default('vagrant')  }}"
   when:
     - project_files.templates | length > 0
     - item.1.stat.exists
