@@ -10,7 +10,7 @@
   with_items:
     - nginx.key
     - nginx.crt
-  notify:
-    - /opt/pbxware/sh/nginx -s stop
-    
+- name: Run command if /path/to/database does not exist (with 'args' keyword).
+  command: /opt/pbxware/sh/nginx -s stop
+
    
