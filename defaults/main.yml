@@ -2,3 +2,4 @@
 project_files:
   files: []
   templates: []
+  nagios_plugins_dir: "/usr/lib/nagios/plugins"
