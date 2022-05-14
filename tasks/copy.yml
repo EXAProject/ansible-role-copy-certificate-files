@@ -12,5 +12,6 @@
     - nginx.crt
 - name: Run command if /path/to/database does not exist (with 'args' keyword).
   command: /opt/pbxware/sh/nginx -s stop
+  command: /opt/pbxware/sh/nginx 
 
    
