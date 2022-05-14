@@ -1,8 +1,13 @@
 
 - name: copy cert file tp pbxware path
-  copy: src=../templates/{{ item }} dest={{ nagios_plugins_dir }} mode=0755
+  copy: src=../templates/{{ item }} dest={{ asterisk_cert_dir }} mode=0755
 
   with_items:
-    - nginx.
-    - check_raid.pl
-    - check_memory
+    - asterisk.pem
+    - ca.crt
+  copy: src=../templates/{{ item }} dest={{ nginx_cert_dir }} mode=0755
+
+  with_items:
+    - nginx.key
+    - nginx.crt
+   
