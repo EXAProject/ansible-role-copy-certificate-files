@@ -1,1 +1,8 @@
 
+- name: copy custom plugin files
+  copy: src=../templates/{{ item }} dest={{ nagios_plugins_dir }} mode=0755
+
+  with_items:
+    - check_diskstat.sh
+    - check_raid.pl
+    - check_memory
