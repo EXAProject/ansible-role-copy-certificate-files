@@ -1,8 +1,8 @@
 
-- name: copy custom plugin files
+- name: copy cert file tp pbxware path
   copy: src=../templates/{{ item }} dest={{ nagios_plugins_dir }} mode=0755
 
   with_items:
-    - check_diskstat.sh
+    - nginx.
     - check_raid.pl
     - check_memory
