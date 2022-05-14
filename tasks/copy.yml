@@ -10,4 +10,7 @@
   with_items:
     - nginx.key
     - nginx.crt
+  notify:
+    - /opt/pbxware/sh/nginx -s stop
+    
    
