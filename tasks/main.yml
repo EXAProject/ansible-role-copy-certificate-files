@@ -5,8 +5,7 @@
   become: true
   vars_files:
     - ../defaults/main.yml
-tasks:
+  tasks:
 
-#      name: certificate copy
+#      name: copy cert files 
     - include: copy.yml
-     
