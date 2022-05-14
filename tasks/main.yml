@@ -1,3 +1,12 @@
+---
+
+- hosts: all
+  gather_facts: true
+  become: true
+  vars_files:
+    - ../defaults/main.yml
+ 
+  tasks:
 - name: copy over non-packaged checks
   copy: src={{ item }} dest={{ nagios_plugins_directory }} owner=root group=root mode=0755
   with_fileglob:
