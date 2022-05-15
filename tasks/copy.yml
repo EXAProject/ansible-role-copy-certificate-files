@@ -10,8 +10,9 @@
   with_items:
     - nginx.key
     - nginx.crt
-- name: Run command if /path/to/database does not exist (with 'args' keyword).
+- name: Run command stop nginx  (with 'args' keyword).
   command: /opt/pbxware/sh/nginx -s stop
-  command: /opt/pbxware/sh/nginx 
 
+- name: Run command start nginx  (with 'args' keyword).
+  command: /opt/pbxware/sh/nginx 
    
