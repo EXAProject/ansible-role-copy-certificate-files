@@ -1,10 +1,12 @@
 
-- name: copy cert file tp pbxware path
+- name: copy cert file to pbxware path
   copy: src=../templates/{{ item }} dest={{ asterisk_cert_dir }} mode=0755
 
   with_items:
     - asterisk.pem
     - ca.crt
+  
+- name: copy cert file to Nginx Path
   copy: src=../templates/{{ item }} dest={{ nginx_cert_dir }} mode=0755
 
   with_items:
